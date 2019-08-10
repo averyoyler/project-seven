@@ -1,0 +1,37 @@
+html
+  include ../includes/head.pug
+  body
+    include ../includes/nav.pug
+    div.container
+      h1 Users
+      div.usersContainer
+        if users.length > 0
+          div.userContainer
+            div.user
+              div.userid
+                span User ID
+              div.name
+                span First Name
+              div.name.sortHeader
+                span Last Name
+                a.sort(href='/sort')
+                  i.fas.fa-arrow-up
+              div.email
+                span Email
+              div.age
+                span Age
+              span.edit
+          each user in users
+            div.user
+              div.userid #{user.id}
+              div.name #{user.firstname}
+              div.name #{user.lastname}
+              div.email #{user.email}
+              div.age #{user.age}
+              span.edit
+                a(href='/edituser/'+user.id)
+                  i.far.fa-edit
+                a(href='/deleteuser/'+user.id)
+                  i.fas.fa-trash
+        else
+          div Sorry, there aren't any users registered.

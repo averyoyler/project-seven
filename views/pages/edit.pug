@@ -1,0 +1,24 @@
+include ../includes/mixin.pug
+
+html
+  include ../includes/head.pug
+  body
+    include ../includes/nav.pug
+    div.container
+      h1 Edit
+      div.form
+        form(action="/updateUser" method="POST")
+          div
+            label(for="firstname") First Name:
+            input(type="text", name="firstname", id="firstname" required value=user.firstname)
+          div
+            label(for="lastname") Last Name:
+            input(type="text", name="lastname", id="lastname" required value=user.lastname)
+          div
+            label(for="email") Email:
+            input(type="text", name="email", id="email" required value=user.email)
+          div
+            label(for='age') Age:
+            input(type='number', name='age', id='age' value=user.age)
+          div.submitBtn
+            input(type="submit")

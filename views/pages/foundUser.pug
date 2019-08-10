@@ -1,0 +1,40 @@
+html
+  include ../includes/head.pug
+  body
+    include ../includes/nav.pug
+    div.container
+      h1 Results
+      div.usersContainer
+        if users.length > 0
+          div.userContainer
+            div.user
+              div.userid User ID
+              div.name First Name
+              div.name Last Name
+              div.email Email
+              div.age Age
+              span.edit
+          each user in users
+            div.user
+              div.userid #{user.id}
+              div.name #{user.firstname}
+              div.name #{user.lastname}
+              div.email #{user.email}
+              div.age #{user.age}
+              span.edit
+                a(href='/edituser/'+user.id)
+                  i.far.fa-edit
+                a(href='/deleteuser/'+user.id)
+                  i.fas.fa-trash
+        else
+          if firstname && lastname
+            div Sorry, there aren't any users registered by the name of 
+              span.query '#{firstname} #{lastname}'
+          else if firstname
+            div Sorry, there aren't any users registered with the first name of 
+              span.query '#{firstname}'
+          else if lastname
+            div Sorry, there aren't any users registered with the last name of 
+              span.query '#{lastname}'
+          else
+            div Sorry, there aren't any users without a name!

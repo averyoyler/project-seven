@@ -1,0 +1,197 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5
+}
+
+nav {
+  height: 60px;
+  background-color: maroon;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+nav a {
+  margin-left: 15px;
+  color: white;
+}
+
+.container {
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  background-color: lightgrey;
+  width: 330px;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.form label {
+  display: inline-block;
+  width: 90px;
+}
+
+.form input {
+  outline: none;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.form input[type=submit] {
+  background-color: maroon;
+  color: white;
+  padding: 5px 20px;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: maroon;
+}
+
+
+
+/* USER */
+
+.usersContainer {
+  font-size: 18px;
+}
+
+.userContainer div {
+  text-align: center;
+  font-weight: bold;
+}
+
+.user {
+  display: flex;
+}
+
+.user:first-of-type div {
+  border-top: 1px solid grey;
+}
+
+.user div {
+  padding: 5px;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.user div:nth-child(5){
+  border-right: 1px solid grey;
+}
+
+.user > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75%;
+}
+
+.user span i:first-child {
+  margin-right: 3px;
+}
+
+.userid {
+  width: 190px;
+}
+
+.sortHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  position: relative;
+  width: 190px;
+}
+
+.email {
+  width: 300px;
+}
+
+.age {
+  width: 45px;
+}
+
+.edit {
+  width: 45px;
+  border: none;
+}
+
+.buttons {
+  margin-top: 150px;
+  height: 350px;
+  width: 750px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  height: 100%;
+  background-color: maroon;
+  color: white;
+  font-size: 42px;
+}
+
+a i {
+  color: grey;
+}
+
+.searchForm {
+  display: flex;
+  margin: 0;
+}
+
+.search {
+  margin: 0 10px 0 25px;
+  background-color: maroon;
+  color: white;
+  padding: 3px;
+  outline: none;
+  width: 175px;
+}
+
+.search::placeholder {
+  color: lightgrey;
+}
+
+.fa-arrow-up {
+  position: absolute;
+  right: 5px;
+  font-size: 80%;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+}
+
+.query {
+  color: maroon;
+}

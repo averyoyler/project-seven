@@ -1,0 +1,23 @@
+include ../includes/mixin.pug
+
+html
+  include ../includes/head.pug
+  body
+    include ../includes/nav.pug
+    div.container
+      h1 Form
+      div.form
+        form(action="/addUser" method="POST")
+          div
+            +textInput('firstname', 'First Name:')
+          div
+            +textInput('lastname', 'Last Name:')
+          div
+            label(for='email') Email:
+            input(type='email', name='email', id='email' required)
+          div
+            label(for='age') Age:
+            input(type='number', name='age', id='age' required)
+          div.submitBtn
+            input(type="submit")
+    //- include includes/footer.pug

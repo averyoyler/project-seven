@@ -1,0 +1,18 @@
+include ../includes/mixin.pug
+
+html
+  include ../includes/head.pug
+  body
+    include ../includes/nav.pug
+    div.container
+      h1 Search User
+      div.form(style="height: 150px;")
+        form(action="/search" method="POST")
+          div
+            label(for='firstname') First Name:
+            input(type="text", name='firstname')
+          div
+            label(for='lastname') Last Name:
+            input(type="text", name='lastname')
+          div.submitBtn
+            input(type="submit")
